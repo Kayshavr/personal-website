@@ -17,22 +17,30 @@
                 <h2 id="title">Visitor's Survey Form</h2>
                 <p id="description">Thank you for joining the survey</p>
                 <form id="survey-form">
-                <label id="name-label" for="name">Name<input id="name" type="text" placeholder="Enter your name" required></label>
-                <label id="email-label" for="email">Email<input id="email" type="email" placeholder="Enter your email" required></label>
-                <label id="number-label" for="number">Age<input id="number" type="number" min="0" max="120" placeholder="Enter your age"></label>
-                <label>What is your current role?<select id="dropdown">
-                    <option>Student</option>
-                    <option>Working</option>
-                </select></label>
-                <label for="yes-label">Yes<input id="yes-label" name="yes-no" type="radio" value="yes"></label>
-                <label for="no-label">No<input id="yes-label" name="yes-no" type="radio" value="no
-                "></label>
-                <label>Do you have these devices: 
-                    <label>Smartphone <input value="smartphone" type="checkbox"></label>
-                    <label>Laptop <input value="laptop" type="checkbox"></label>
-                </label>
-                <label>Additional Comments:<textarea></textarea></label>
-                <input id="submit" type="submit">
+                    <fieldset>
+                        <label id="name-label" for="name">Name<input id="name" type="text" placeholder="Enter your name" required></label>
+                        <label id="email-label" for="email">Email<input id="email" type="email" placeholder="Enter your email" required></label>
+                        <label id="number-label" for="number">Age<input id="number" type="number" min="0" max="120" placeholder="Enter your age"></label>
+                    </fieldset>
+                    <fieldset>
+                        <label for="role">What is your current role?
+                            <select id="role" name="role">
+                              <option value="">(select one)</option>
+                              <option value="1">Student</option>
+                              <option value="2">Freelance</option>
+                              <option value="3">Working</option>
+                              <option value="4">Other</option>
+                            </select>
+                          </label>
+                        <label for="profile-picture">Upload a profile picture: <input id="profile-picture" type="file" name="file" /></label>
+                    </fieldset>
+                    <fieldset>
+                        <label for="age">Input your age (years): <input id="age" type="number" name="age" min="13" max="120" /></label>
+                        <label for="bio">Provide a bio:
+                      <textarea id="bio" name="bio" rows="3" cols="30" placeholder="I like coding on the beach..."></textarea>
+                    </label>
+                  </fieldset>
+                  <input type="submit" value="Submit" />
                 </form>
             </section>
         </main>
